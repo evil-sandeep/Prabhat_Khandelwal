@@ -60,7 +60,10 @@ const WhyChoose = () => {
                         </ul>
 
                         <div className="pt-4 md:pt-6">
-                            <a href="#contact" className="btn px-8 py-3 md:px-10 md:py-4 text-sm md:text-base">Secure Representation</a>
+                            <a href="#contact" className="btn relative group overflow-hidden px-8 py-3 md:px-10 md:py-4 text-sm md:text-base border-secondary">
+                                <span className="relative z-10 transition-colors duration-300">Secure Representation</span>
+                                <div className="absolute bottom-0 left-0 w-full h-[4px] bg-secondary transform scale-x-75 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+                            </a>
                         </div>
                     </div>
                 </div>

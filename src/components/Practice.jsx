@@ -89,8 +89,9 @@ const Practice = () => {
                                 {area.description}
                             </p>
 
-                            <div className="mt-8 md:mt-10 flex items-center gap-2 text-secondary font-semibold uppercase tracking-widest text-[10px] md:text-xs opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:gap-4">
-                                Explore Expertise <span className="text-lg md:text-xl">⇀</span>
+                            <div className="mt-8 md:mt-10 flex items-center gap-2 text-secondary font-semibold uppercase tracking-widest text-[10px] md:text-xs opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:gap-4 relative overflow-hidden pb-1">
+                                <span>Explore Expertise <span className="text-lg md:text-xl">⇀</span></span>
+                                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                             </div>
                         </div>
                     ))}

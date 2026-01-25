@@ -25,8 +25,14 @@ const Hero = () => {
             Bringing over two decades of professional experience in legal practice.
           </p>
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
-            <a href="#contact" className="btn px-6 py-3 md:px-8 md:py-4 text-base md:text-lg">Immediate Consultation</a>
-            <a href="#practice" className="btn btn-outline px-6 py-3 md:px-8 md:py-4 text-base md:text-lg">Case Expertise</a>
+            <a href="#contact" className="btn relative group overflow-hidden px-6 py-3 md:px-8 md:py-4 text-base md:text-lg border-secondary">
+              <span className="relative z-10 transition-colors duration-300">Immediate Consultation</span>
+              <div className="absolute bottom-0 left-0 w-full h-[3px] bg-secondary transform scale-x-75 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+            </a>
+            <a href="#practice" className="btn btn-outline relative group overflow-hidden px-6 py-3 md:px-8 md:py-4 text-base md:text-lg border-secondary/30">
+              <span className="relative z-10 transition-colors duration-300">Case Expertise</span>
+              <div className="absolute bottom-0 left-0 w-full h-[3px] bg-secondary transform scale-x-75 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+            </a>
           </div>
         </div>
 

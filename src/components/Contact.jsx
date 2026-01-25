@@ -236,7 +236,10 @@ const Contact = () => {
                                 ></textarea>
                             </div>
                             <div className="md:col-span-2 pt-4 md:pt-6">
-                                <button type="submit" className="btn w-full py-4 md:py-5 text-lg md:text-xl tracking-[0.1em] md:tracking-[0.2em] font-bold">SUBMIT CONFIDENTIAL REQUEST</button>
+                                <button type="submit" className="btn relative group overflow-hidden w-full py-4 md:py-5 text-lg md:text-xl tracking-[0.1em] md:tracking-[0.2em] font-bold border-secondary">
+                                    <span className="relative z-10 transition-colors duration-300">SUBMIT CONFIDENTIAL REQUEST</span>
+                                    <div className="absolute bottom-0 left-0 w-full h-[4px] bg-secondary transform scale-x-75 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+                                </button>
                                 <div className="mt-6 md:mt-8 flex items-center justify-center gap-4 text-text-muted px-4">
                                     <div className="h-px bg-white/10 flex-grow hidden sm:block"></div>
                                     <p className="text-[8px] md:text-[10px] uppercase tracking-widest font-bold text-center">Attorney-Client Privilege Guaranteed</p>

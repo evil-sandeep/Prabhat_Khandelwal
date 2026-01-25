@@ -43,7 +43,10 @@ const About = () => {
                         </div>
 
                         <div className="pt-4 md:pt-6">
-                            <button className="btn btn-outline px-6 py-2.5 md:px-8 md:py-3 text-sm md:text-base">Learn Our Philosophy</button>
+                            <button className="btn btn-outline relative group overflow-hidden px-6 py-2.5 md:px-8 md:py-3 text-sm md:text-base border-secondary/30">
+                                <span className="relative z-10 transition-colors duration-300">Learn Our Philosophy</span>
+                                <div className="absolute bottom-0 left-0 w-full h-[4px] bg-secondary transform scale-x-75 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+                            </button>
                         </div>
                     </div>
 
@@ -61,9 +64,11 @@ const About = () => {
                         </div>
 
                         {/* Absolute badge */}
-                        <div className="absolute -bottom-4 -left-4 md:top-2 md:-left-2 bg-bg-card border border-secondary/30 p-2 md:p-1 rounded-xl shadow-2xl animate-float max-w-[200px] md:max-w-none">
-                            <p className="font-serif text-sm md:text-base lg:text-2xl text-secondary italic">"Integrity is the essence of everything we do."</p>
+                        {/* Absolute badge */}
+                        <div className="absolute top-2 -left-2 bg-bg-card border border-secondary/30 p-1 rounded-xl shadow-2xl hidden xl:block animate-float">
+                            <p className="font-serif text-2xl text-secondary italic">"Integrity is the essence of everything we do."</p>
                         </div>
+
                     </div>
                 </div>
             </div>
