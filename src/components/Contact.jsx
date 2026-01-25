@@ -76,18 +76,18 @@ const Contact = () => {
             )
         },
         {
-    label: 'GitHub',
-    link: 'https://github.com/evil-sandeep/',
-    icon: (
-        <svg
-            className="w-6 h-6"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-        >
-            <path
-                fillRule="evenodd"
-                d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577
+            label: 'GitHub',
+            link: 'https://github.com/evil-sandeep/',
+            icon: (
+                <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path
+                        fillRule="evenodd"
+                        d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577
                 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
                 -.546-1.387-1.333-1.757-1.333-1.757
                 -1.089-.745.083-.73.083-.73
@@ -109,29 +109,29 @@ const Contact = () => {
                 0 .322.218.694.825.576
                 C20.565 21.796 24 17.3 24 12
                 24 5.373 18.627 0 12 0z"
-                clipRule="evenodd"
-            />
-        </svg>
-    )
-},
+                        clipRule="evenodd"
+                    />
+                </svg>
+            )
+        },
 
     ];
 
     return (
-        <section id="contact" className="py-24 bg-[#0a0a0a]">
+        <section id="contact" className="py-16 lg:py-24 bg-[#0a0a0a]">
             <div className="container mx-auto px-6">
-                <div className="flex flex-col lg:flex-row gap-20">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
                     {/* Left Side: Contact Info */}
-                    <div className="w-full lg:w-1/3 space-y-12">
+                    <div className="w-full lg:w-1/3 space-y-8 md:space-y-12 text-center lg:text-left">
                         <div className="space-y-4">
-                            <p className="text-secondary font-medium tracking-widest uppercase text-sm">Get in Touch</p>
-                            <h2 className="text-4xl md:text-5xl font-serif font-bold italic">Secure <br />Consultation</h2>
-                            <p className="text-text-muted text-lg leading-relaxed">
+                            <p className="text-secondary font-medium tracking-widest uppercase text-xs md:text-sm">Get in Touch</p>
+                            <h2 className="text-3xl md:text-5xl font-serif font-bold italic">Secure <br className="hidden md:block" />Consultation</h2>
+                            <p className="text-text-muted text-base md:text-lg leading-relaxed max-w-md mx-auto lg:mx-0">
                                 Contact us immediately for a confidential case analysis. Your privacy and protection are our primary concerns.
                             </p>
                         </div>
 
-                        <div className="space-y-8">
+                        <div className="space-y-4 md:space-y-8 text-left max-w-sm mx-auto lg:mx-0">
                             {contactLinks.map((item, i) => (
                                 <div key={i}>
                                     {item.link ? (
@@ -139,20 +139,20 @@ const Contact = () => {
                                             href={item.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className={`flex gap-6 p-4 rounded-2xl transition-all duration-300 ${item.highlight ? 'bg-secondary/10 border border-secondary/20 hover:scale-105 shadow-lg shadow-secondary/5' : 'hover:bg-white/5'}`}
+                                            className={`flex gap-4 md:gap-6 p-4 rounded-2xl transition-all duration-300 ${item.highlight ? 'bg-secondary/10 border border-secondary/20 hover:scale-105 shadow-lg shadow-secondary/5' : 'hover:bg-white/5'}`}
                                         >
                                             <div className={`text-secondary shrink-0 ${item.highlight ? 'animate-pulse' : ''}`}>{item.icon}</div>
                                             <div>
-                                                <p className="text-secondary font-bold text-xs uppercase tracking-widest mb-1">{item.label}</p>
-                                                <p className={`text-lg font-medium ${item.highlight ? 'text-white' : 'text-text-muted'}`}>{item.value}</p>
+                                                <p className="text-secondary font-bold text-[10px] md:text-xs uppercase tracking-widest mb-1">{item.label}</p>
+                                                <p className={`text-base md:text-lg font-medium ${item.highlight ? 'text-white' : 'text-text-muted'}`}>{item.value}</p>
                                             </div>
                                         </a>
                                     ) : (
-                                        <div className={`flex gap-6 p-4 rounded-2xl transition-all duration-300 ${item.highlight ? 'bg-secondary/10 border border-secondary/20 group' : 'hover:bg-white/5'}`}>
+                                        <div className={`flex gap-4 md:gap-6 p-4 rounded-2xl transition-all duration-300 ${item.highlight ? 'bg-secondary/10 border border-secondary/20 group' : 'hover:bg-white/5'}`}>
                                             <div className={`text-secondary shrink-0 ${item.highlight ? 'animate-pulse' : ''}`}>{item.icon}</div>
                                             <div>
-                                                <p className="text-secondary font-bold text-xs uppercase tracking-widest mb-1">{item.label}</p>
-                                                <p className={`text-lg font-medium ${item.highlight ? 'text-white' : 'text-text-muted'}`}>{item.value}</p>
+                                                <p className="text-secondary font-bold text-[10px] md:text-xs uppercase tracking-widest mb-1">{item.label}</p>
+                                                <p className={`text-base md:text-lg font-medium ${item.highlight ? 'text-white' : 'text-text-muted'}`}>{item.value}</p>
                                             </div>
                                         </div>
                                     )}
@@ -160,9 +160,9 @@ const Contact = () => {
                             ))}
                         </div>
 
-                        <div className="pt-8">
-                            <p className="text-secondary font-bold text-xs uppercase tracking-widest mb-6">Digital Presence</p>
-                            <div className="flex gap-4">
+                        <div className="pt-4 md:pt-8">
+                            <p className="text-secondary font-bold text-xs uppercase tracking-widest mb-4 md:mb-6">Digital Presence</p>
+                            <div className="flex justify-center lg:justify-start gap-4">
                                 {socialLinks.map((social, i) => (
                                     <a
                                         key={i}
@@ -180,67 +180,67 @@ const Contact = () => {
                     </div>
 
                     {/* Right Side: Form */}
-                    <div className="w-full lg:w-2/3 bg-bg-card p-10 lg:p-16 rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden group">
+                    <div className="w-full lg:w-2/3 bg-bg-card p-6 md:p-10 lg:p-16 rounded-3xl border border-white/5 shadow-2xl relative overflow-hidden group">
                         {/* Subtle interactive glow */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-[80px] -z-10 group-hover:bg-secondary/10 transition-colors duration-500"></div>
 
-                        <form ref={form} onSubmit={sendEmail} className="grid md:grid-cols-2 gap-8 relative">
+                        <form ref={form} onSubmit={sendEmail} className="grid md:grid-cols-2 gap-6 md:gap-8 relative">
                             <div className="space-y-2">
-                                <label className="text-xs uppercase font-bold tracking-widest text-text-muted">Full Name</label>
+                                <label className="text-[10px] md:text-xs uppercase font-bold tracking-widest text-text-muted">Full Name</label>
                                 <input
                                     type="text"
                                     name="name"
                                     placeholder="e.g. Prabhat Khandelwal"
                                     required
-                                    className="w-full bg-bg border-b border-white/10 p-4 focus:border-secondary outline-none transition-colors text-white"
+                                    className="w-full bg-bg border-b border-white/10 p-3 md:p-4 focus:border-secondary outline-none transition-colors text-white text-sm md:text-base"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-xs uppercase font-bold tracking-widest text-text-muted">Direct Email</label>
+                                <label className="text-[10px] md:text-xs uppercase font-bold tracking-widest text-text-muted">Direct Email</label>
                                 <input
                                     type="email"
                                     name="email"
                                     placeholder="law@example.com"
                                     required
-                                    className="w-full bg-bg border-b border-white/10 p-4 focus:border-secondary outline-none transition-colors text-white"
+                                    className="w-full bg-bg border-b border-white/10 p-3 md:p-4 focus:border-secondary outline-none transition-colors text-white text-sm md:text-base"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-xs uppercase font-bold tracking-widest text-text-muted">Phone Number</label>
+                                <label className="text-[10px] md:text-xs uppercase font-bold tracking-widest text-text-muted">Phone Number</label>
                                 <input
                                     type="tel"
                                     name="phone"
                                     placeholder="e.g. +91 89844 80099"
                                     required
-                                    className="w-full bg-bg border-b border-white/10 p-4 focus:border-secondary outline-none transition-colors text-white"
+                                    className="w-full bg-bg border-b border-white/10 p-3 md:p-4 focus:border-secondary outline-none transition-colors text-white text-sm md:text-base"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-xs uppercase font-bold tracking-widest text-text-muted">Subject</label>
+                                <label className="text-[10px] md:text-xs uppercase font-bold tracking-widest text-text-muted">Subject</label>
                                 <input
                                     type="text"
                                     name="subject"
                                     placeholder="Case Consultation"
                                     required
-                                    className="w-full bg-bg border-b border-white/10 p-4 focus:border-secondary outline-none transition-colors text-white"
+                                    className="w-full bg-bg border-b border-white/10 p-3 md:p-4 focus:border-secondary outline-none transition-colors text-white text-sm md:text-base"
                                 />
                             </div>
                             <div className="space-y-2 md:col-span-2">
-                                <label className="text-xs uppercase font-bold tracking-widest text-text-muted">Detailed Narrative</label>
+                                <label className="text-[10px] md:text-xs uppercase font-bold tracking-widest text-text-muted">Detailed Narrative</label>
                                 <textarea
                                     name="message"
-                                    rows="5"
-                                    placeholder="Describe your situation with relevant details..."
+                                    rows="4"
+                                    placeholder="Describe your situation..."
                                     required
-                                    className="w-full bg-bg border-b border-white/10 p-4 focus:border-secondary outline-none transition-colors resize-none text-white"
+                                    className="w-full bg-bg border-b border-white/10 p-3 md:p-4 focus:border-secondary outline-none transition-colors resize-none text-white text-sm md:text-base"
                                 ></textarea>
                             </div>
-                            <div className="md:col-span-2 pt-6">
-                                <button type="submit" className="btn w-full py-5 text-xl tracking-[0.2em] font-bold">SUBMIT CONFIDENTIAL REQUEST</button>
-                                <div className="mt-8 flex items-center justify-center gap-4 text-text-muted">
-                                    <div className="h-px bg-white/10 flex-grow"></div>
-                                    <p className="text-[10px] uppercase tracking-widest font-bold">Attorney-Client Privilege Guaranteed</p>
-                                    <div className="h-px bg-white/10 flex-grow"></div>
+                            <div className="md:col-span-2 pt-4 md:pt-6">
+                                <button type="submit" className="btn w-full py-4 md:py-5 text-lg md:text-xl tracking-[0.1em] md:tracking-[0.2em] font-bold">SUBMIT CONFIDENTIAL REQUEST</button>
+                                <div className="mt-6 md:mt-8 flex items-center justify-center gap-4 text-text-muted px-4">
+                                    <div className="h-px bg-white/10 flex-grow hidden sm:block"></div>
+                                    <p className="text-[8px] md:text-[10px] uppercase tracking-widest font-bold text-center">Attorney-Client Privilege Guaranteed</p>
+                                    <div className="h-px bg-white/10 flex-grow hidden sm:block"></div>
                                 </div>
                             </div>
                         </form>

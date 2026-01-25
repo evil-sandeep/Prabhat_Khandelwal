@@ -10,20 +10,20 @@ const About = () => {
     ];
 
     return (
-        <section id="about" className="py-24 bg-bg overflow-hidden">
+        <section id="about" className="py-16 lg:py-24 bg-bg overflow-hidden">
             <div className="container mx-auto px-6">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Left Side: Content */}
-                    <div className="space-y-8 animate">
+                    <div className="space-y-8 animate text-center lg:text-left">
                         <div className="space-y-4">
-                            <p className="text-secondary font-medium tracking-widest uppercase text-sm">Commitment to Justice</p>
-                            <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
-                                A Legacy of Excellence in <br />
+                            <p className="text-secondary font-medium tracking-widest uppercase text-xs md:text-sm">Commitment to Justice</p>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight">
+                                A Legacy of Excellence in <br className="hidden md:block" />
                                 <span className="text-secondary">Criminal Defense</span>
                             </h2>
                         </div>
 
-                        <div className="space-y-6 text-text-muted text-lg leading-relaxed">
+                        <div className="space-y-6 text-text-muted text-base md:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
                             <p>
                                 Prabhat Khandelwal has dedicated over two decades to defending the rights of individuals in the most complex criminal cases. Our firm is built on the pillars of integrity, strategic brilliance, and an unwavering commitment to our clients.
                             </p>
@@ -33,24 +33,24 @@ const About = () => {
                         </div>
 
                         {/* Stats Grid */}
-                        <div className="grid grid-cols-2 gap-8 pt-8">
+                        <div className="grid grid-cols-2 gap-4 md:gap-8 pt-4 md:pt-8 text-left">
                             {stats.map((stat, index) => (
-                                <div key={index} className="border-l-2 border-secondary/30 pl-6 space-y-1">
-                                    <p className="text-3xl font-serif font-bold text-secondary">{stat.value}</p>
-                                    <p className="text-sm uppercase tracking-wider text-text-muted">{stat.label}</p>
+                                <div key={index} className="border-l-2 border-secondary/30 pl-4 md:pl-6 space-y-1">
+                                    <p className="text-2xl md:text-3xl font-serif font-bold text-secondary">{stat.value}</p>
+                                    <p className="text-[10px] md:text-sm uppercase tracking-wider text-text-muted">{stat.label}</p>
                                 </div>
                             ))}
                         </div>
 
-                        <div className="pt-6">
-                            <button className="btn btn-outline px-8 py-3">Learn More Our Philosophy</button>
+                        <div className="pt-4 md:pt-6">
+                            <button className="btn btn-outline px-6 py-2.5 md:px-8 md:py-3 text-sm md:text-base">Learn Our Philosophy</button>
                         </div>
                     </div>
 
                     {/* Right Side: Image with Decorative Elements */}
-                    <div className="relative group">
+                    <div className="relative group order-first lg:order-last mb-12 lg:mb-0 max-w-[500px] mx-auto lg:max-w-none">
                         {/* Background decorative box */}
-                        <div className="absolute -top-6 -right-6 w-full h-full border-2 border-secondary/20 rounded-2xl -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
+                        <div className="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-full h-full border-2 border-secondary/20 rounded-2xl -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500"></div>
 
                         <div className="rounded-2xl overflow-hidden shadow-2xl">
                             <img
@@ -61,8 +61,8 @@ const About = () => {
                         </div>
 
                         {/* Absolute badge */}
-                        <div className="absolute top-2 -left-2 bg-bg-card border border-secondary/30 p-1 rounded-xl shadow-2xl hidden xl:block animate-float">
-                            <p className="font-serif text-2xl text-secondary italic">"Integrity is the essence of everything we do."</p>
+                        <div className="absolute -bottom-4 -left-4 md:top-2 md:-left-2 bg-bg-card border border-secondary/30 p-2 md:p-1 rounded-xl shadow-2xl animate-float max-w-[200px] md:max-w-none">
+                            <p className="font-serif text-sm md:text-base lg:text-2xl text-secondary italic">"Integrity is the essence of everything we do."</p>
                         </div>
                     </div>
                 </div>

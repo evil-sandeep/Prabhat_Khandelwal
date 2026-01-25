@@ -59,38 +59,38 @@ const practiceAreas = [
 
 const Practice = () => {
     return (
-        <section id="practice" className="py-24 bg-[#0a0a0a] relative">
-            <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-[100px] -z-10"></div>
+        <section id="practice" className="py-16 lg:py-24 bg-[#0a0a0a] relative overflow-hidden">
+            <div className="absolute top-0 left-1/4 w-72 h-72 md:w-96 md:h-96 bg-secondary/5 rounded-full blur-[80px] md:blur-[100px] -z-10"></div>
             <div className="container mx-auto px-6">
-                <div className="text-center mb-20 space-y-4">
-                    <p className="text-secondary font-medium tracking-[0.3em] uppercase text-xs">Specialized Defense</p>
-                    <h2 className="text-5xl md:text-6xl font-serif font-bold text-white">Elite Practice Areas</h2>
-                    <div className="h-[2px] w-12 bg-secondary mx-auto mt-6"></div>
+                <div className="text-center mb-12 md:mb-20 space-y-4">
+                    <p className="text-secondary font-medium tracking-[0.2em] md:tracking-[0.3em] uppercase text-[10px] md:text-xs">Specialized Defense</p>
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">Elite Practice Areas</h2>
+                    <div className="h-[2px] w-12 bg-secondary mx-auto mt-4 md:mt-6"></div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
                     {practiceAreas.map((area, index) => (
                         <div
                             key={index}
-                            className="group relative p-12 bg-[#151515] hover:bg-[#1a1a1a] border border-white/5 hover:border-secondary/30 rounded-3xl transition-all duration-700 hover:-translate-y-3 cursor-default h-full flex flex-col items-start overflow-hidden shadow-2xl"
+                            className="group relative p-8 md:p-12 bg-[#151515] hover:bg-[#1a1a1a] border border-white/5 hover:border-secondary/30 rounded-2xl md:rounded-3xl transition-all duration-700 hover:-translate-y-2 md:hover:-translate-y-3 cursor-default h-full flex flex-col items-start overflow-hidden shadow-2xl"
                         >
                             {/* Decorative line */}
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl group-hover:bg-secondary/10 transition-colors duration-500"></div>
+                            <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-secondary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-xl md:blur-2xl group-hover:bg-secondary/10 transition-colors duration-500"></div>
 
-                            <div className="text-secondary mb-8 p-4 bg-secondary/10 rounded-2xl group-hover:scale-110 transition-transform duration-500 ring-1 ring-secondary/20">
-                                {area.icon}
+                            <div className="text-secondary mb-6 md:mb-8 p-3 md:p-4 bg-secondary/10 rounded-xl md:rounded-2xl group-hover:scale-110 transition-transform duration-500 ring-1 ring-secondary/20">
+                                <span className="w-8 h-8 md:w-12 md:h-12 block">{area.icon}</span>
                             </div>
 
-                            <h3 className="text-2xl font-serif font-bold mb-4 text-white group-hover:text-secondary transition-colors duration-500">
+                            <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 md:mb-4 text-white group-hover:text-secondary transition-colors duration-500">
                                 {area.title}
                             </h3>
 
-                            <p className="text-text-muted leading-relaxed text-lg flex-grow">
+                            <p className="text-text-muted leading-relaxed text-base md:text-lg flex-grow">
                                 {area.description}
                             </p>
 
-                            <div className="mt-10 flex items-center gap-2 text-secondary font-semibold uppercase tracking-widest text-xs opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:gap-4">
-                                Explore Expertise <span className="text-xl">⇀</span>
+                            <div className="mt-8 md:mt-10 flex items-center gap-2 text-secondary font-semibold uppercase tracking-widest text-[10px] md:text-xs opacity-60 group-hover:opacity-100 transition-all duration-500 group-hover:gap-4">
+                                Explore Expertise <span className="text-lg md:text-xl">⇀</span>
                             </div>
                         </div>
                     ))}
