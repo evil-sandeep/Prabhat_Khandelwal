@@ -10,7 +10,9 @@ function App() {
   return (
     <div className="app">
       <nav>
-        <div className="logo">JUSTITIA</div>
+        <div className="logo">ADVOCACY
+
+</div>
         <div className="nav-links">
           <a href="#home">Home</a>
           <a href="#about">About</a>
