@@ -13,7 +13,7 @@ const Hero = () => {
               SDJM Court, Balasore
             </p>
             <h1 className="text-5xl md:text-6xl lg:text-8xl font-serif font-bold leading-tight">
-              Sandeep <br className="hidden md:block" />
+              Pravhat <br className="hidden md:block" />
               <span className="text-secondary">Khandelwal</span>
             </h1>
           </div>
